@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Geologica';
+  src: url('../fonts/Geologica_Cursive-Bold.ttf');
+}
+
+.home-body {
+  padding-top: 100px;
+}
+
+.container {
+  padding: 10px 15%;
+  display: flex;
+  align-items: center;
+}
+
+.home-info {
+  margin-bottom: 50px;
+  padding: 10px 10px;
+  flex: 1;
+}
+
+h1 span {
+  color: #ffc918dc;
+}
+
+.home-image {
+  flex-shrink: 0;
+}
+
+.contain-image {
+  width: 630px;
+}
+
+h1 {
+  font-size: 59px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-family: 'Geologica';
+}
+
+p {
+  font-size: 20px;
+  color: #ffffff;
+  margin-right: 26%;
+}
+
+.home-btn {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.home-btn button {
+  margin-bottom: 40px;
+}
+
+.primary-btn-1 {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #ffc918dc;
+  opacity: 1;
+  border: 2px solid #d4af37;
+  border-radius: 7px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.primary-btn-1:hover {
+  opacity: 0.7;
+}
+
+.btn-1 {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Nunito-Bold';
+}
+
+.primary-btn-2 {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #383838dc;
+  opacity: 1;
+  border: 2px solid #4e4e4e;
+  border-radius: 7px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.primary-btn-2:hover {
+  background-color: #2c2c2cdc;
+}
+
+.btn-2 {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Nunito-Bold';
+}
