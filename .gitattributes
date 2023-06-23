@@ -1,0 +1,3 @@
+*.js linguist-detectable=true
+*.scss linguist-detectable=false
+*.html linguist-detectable=true
