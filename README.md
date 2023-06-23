@@ -12,4 +12,4 @@ Front-end Interface Preview
 * Firebase Authentication
 * Cloud Firestore
 
-### Inspired by joshxfi
+© inspired by joshxfi
