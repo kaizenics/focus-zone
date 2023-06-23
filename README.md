@@ -2,7 +2,7 @@
 
 Front-end Interface Preview
 
-![image](https://github.com/kaizenics/HTML-CSS-Codes/assets/94561281/24ffcfe9-01ec-4343-890e-39da686ec5e1)
+![image](https://github.com/kaizenics/focuszone-firebase/assets/94561281/efaa33a7-26a6-4537-a1de-6e5b9cd5c4e3)
 
 ## Tech Stack 
 
