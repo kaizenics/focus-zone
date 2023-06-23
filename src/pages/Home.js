@@ -8,7 +8,7 @@ export default function Home() {
         <>
           <Navbar/>
           <div className="home-body">
-            <div className="container">
+            <section className="container-1">
               <div className="home-info">
               <h1>Elevate your life through <span>Gamification!</span>
               </h1>
@@ -26,9 +26,16 @@ export default function Home() {
               <div className="home-image">
                 <img className="contain-image" src={todo} alt="todo"/>
               </div>
-             
-            </div>
+            </section>
+
+            <section className="container-2">
+              <div className="box-1"></div>
+              <div className="box-2"></div>
+              <div className="box-3"></div>
+            </section>
           </div>
+
+         
         </>
     )
 }
