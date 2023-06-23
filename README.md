@@ -6,7 +6,7 @@ Front-end Interface Preview
 
 ## Tech Stack 
 
-* SCSS
+* SASS (CSS pre-processor)
 * React.js
 * Node.js
 * Firebase Authentication
