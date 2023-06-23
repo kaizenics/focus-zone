@@ -1,34 +1,57 @@
+$mainColor: #ffc918dc;
+$secColor: #d4af37;
+$semiColor: #f1c841;
+$boxColor: #383838dc;
+$borderColor: #4e4e4e;
+
 @font-face {
   font-family: 'Geologica';
   src: url('../fonts/Geologica_Cursive-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'NotoSans-Medium';
+  src: url('../fonts/NotoSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'NotoSans-Light';
+  src: url('../fonts/NotoSans-Light.ttf');
+}
+
 .home-body {
-  padding-top: 100px;
+  margin: 0;
+  padding: 0;
 }
 
 .container-1 {
-  padding: 10px 15%;
+  padding: 5px 15%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .home-info {
   margin-bottom: 50px;
+  margin-left: 30px;
   padding: 10px 10px;
-  flex: 1;
 }
 
 h1 span {
-  color: #ffc918dc;
+  color: #f8cd3e;
 }
 
 .home-image {
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .contain-image {
-  width: 630px;
+  width: 570px;
+  margin-left: 20px;
+
 }
 
 h1 {
@@ -42,6 +65,7 @@ p {
   font-size: 20px;
   color: #ffffff;
   margin-right: 26%;
+  font-family: 'NotoSans-Light';
 }
 
 .home-btn {
@@ -58,9 +82,9 @@ p {
   display: inline-block;
   margin-right: 10px;
   padding: 10px 20px;
-  background-color: #ffc918dc;
+  background-color: $mainColor;
   opacity: 1;
-  border: 2px solid #d4af37;
+  border: 2px solid $secColor;
   border-radius: 7px;
   font-size: 18px;
   transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -80,11 +104,10 @@ p {
   display: inline-block;
   margin-right: 20px;
   padding: 10px 20px;
-  background-color: #383838dc;
+  background-color: $boxColor;
   opacity: 1;
-  border: 2px solid #4e4e4e;
+  border: 2px solid $borderColor;
   border-radius: 7px;
-  font-size: 18px;
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
@@ -96,4 +119,96 @@ p {
   color: #fff;
   text-decoration: none;
   font-family: 'Nunito-Bold';
+  font-size: 16px;
+}
+
+.icons-1 {
+  font-size: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.col {
+  width: 20%;
+  height: 260px;
+  background-color: #2b2a2adc;
+  border: 2px solid #444444;
+  border-radius: 7px;
+  margin: 30px 20px 30px 20px;
+}
+
+.box {
+  align-items: center;
+  justify-content: center;
+}
+
+.box h1 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px 0px 10px 20px;
+  font-family: 'Geologica';
+}
+
+.box P {
+  color: #b6b6b6;
+  font-size: 16px;
+  margin: 20px 0px 10px 20px;
+  font-family: 'NotoSans-Light';
+}
+
+.box-icon {
+  font-size: 35px;
+  margin: 30px 10px 10px 20px;
+  color: $semiColor;
+}
+
+.box-button {
+  font-size: 18px;
+  margin: 50px 0px 10px 20px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: $semiColor;
+}
+
+.box-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background-color: $semiColor;
+  transition: width 0.3s ease;
+}
+
+.box-button:hover::after {
+  width: 100%;
+}
+
+.box-btn-1 {
+  display: inline-block;
+  text-decoration: none;
+  color: $semiColor;
+  font-family: 'NotoSans-Medium';
+}
+
+.end-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-1 div {
+  width: 67%;
+  height: 1.5px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  background: $borderColor;
 }

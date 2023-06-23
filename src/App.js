@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/About';
+import './App.scss';
 
 function App() {
   return (
