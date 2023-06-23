@@ -141,6 +141,11 @@ p {
   border: 2px solid #444444;
   border-radius: 7px;
   margin: 30px 20px 30px 20px;
+  transition: transform 0.3s ease;
+}
+
+.col:hover {
+  transform: scale(1.1);
 }
 
 .box {
@@ -183,7 +188,7 @@ p {
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 2.5px;
+  height: 1px;
   background-color: $semiColor;
   transition: width 0.3s ease;
 }
@@ -199,6 +204,14 @@ p {
   font-family: 'NotoSans-Medium';
 }
 
+.box-icon-2 {
+  font-size: 25px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+  vertical-align: middle;
+  color: $semiColor;
+}
+
 .end-1 {
   display: flex;
   justify-content: center;
@@ -211,4 +224,56 @@ p {
   margin-top: 70px;
   margin-bottom: 50px;
   background: $borderColor;
+}
+
+.container-3 {
+  display: flex;
+  margin: 10px 11%;
+}
+
+.column {
+  margin: 10px 8%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.column h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+  align-content: flex-start;
+}
+
+.column p {
+  font-size: 15px;
+  align-items: flex-start;
+  color: #afaeaedc;
+  display: inline-block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.column-hover p {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.column-hover:hover p {
+  color: #8a8a8adc;
+}
+
+.column-2 {
+  align-items: flex-start;
+}
+
+.author-end {
+  margin: 30px 17%;
+}
+
+.author-end a {
+  text-decoration: none;
+}
+
+.author-end p {
+  font-size: 17px;
+  color: #afaeaedc;
 }
