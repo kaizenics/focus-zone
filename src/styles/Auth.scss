@@ -1,0 +1,179 @@
+$mainColor: #ffd034dc;
+$secColor: #eccd68fb;
+$borderColor: #4e4e4e;
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('../fonts/Geologica_Cursive-Bold.ttf');
+  }
+
+@font-face {
+    font-family: 'NotoSans-Light';
+    src: url('../fonts/NotoSans-Light.ttf');
+  }
+
+  @font-face {
+    font-family: 'NotoSans-Medium';
+    src: url('../fonts/NotoSans-Medium.ttf');
+  }
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container-1 {
+    width: 25%;
+    height: 620px;
+    background-color: #252424dc;
+    border: 2px solid #464444;
+    border-radius: 7px;
+    margin-top: 3%;
+    margin-bottom: 15%;
+}
+
+.login-box {
+    text-align: center;
+}
+
+.login-box h3 {
+    font-size: 50px;
+    font-family: 'Geologica';
+    margin: 30px;
+    background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-box h5 {
+    font-size: 14px;
+    padding-top: 12px;
+    font-family: 'NotoSans-Light';
+    margin: 0;
+    color: #fff;
+}
+
+.login-box p {
+    font-size: 14px;
+    font-family: 'NotoSans-Light';
+    margin: 0;
+    color: #fff;
+}
+
+.direct-auth {
+    font-size: 14px;
+    color: $mainColor;
+    text-decoration: none;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 75%;
+    padding: 18px;
+    border: 1px solid #505050dc;
+    border-radius: 4px;
+    background-color: #505050dc;
+    color: #fff;
+    padding-left: 40px;
+}
+
+.form-group input::placeholder {
+    font-size: 14px;
+    color: #b4b4b4; 
+}
+
+.form-group input:focus {
+    border-color: #858585dc; 
+    outline: none; 
+}
+
+.input-icon {
+    position: absolute;
+    font-size: 20px;
+    left: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.login-btn {
+    background-color: $mainColor;
+    font-size: 15px;
+    font-family: 'NotoSans-Medium';
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    width: 85%;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: $secColor;
+}
+
+.login-fb {
+    background-color: #4267B3;
+    font-size: 15px;
+    font-family: 'NotoSans-Medium';
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    width: 85%;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.login-google {
+    background-color: #fff;
+    font-size: 15px;
+    font-family: 'NotoSans-Medium';
+    color: #2b2b2bdc;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 85%;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.auth-icons {
+  font-size: 25px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.end-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-2 div {
+    width: 85%;
+    height: 1.5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: $borderColor;
+}
+
+/* SIGN-UP */
+
+.box-container-2 {
+    width: 25%;
+    height: 740px;
+    background-color: #252424dc;
+    border: 2px solid #464444;
+    border-radius: 7px;
+    margin-top: 3%;
+    margin-bottom: 15%;
+}

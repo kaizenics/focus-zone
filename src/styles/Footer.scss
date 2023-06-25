@@ -1,0 +1,74 @@
+$semiColor: #f1c841;
+$borderColor: #4e4e4e;
+
+@font-face {
+    font-family: 'NotoSans-Light';
+    src: url('../fonts/NotoSans-Light.ttf');
+}
+
+
+.end-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-1 div {
+    width: 67%;
+    height: 1.5px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background: $borderColor;
+}
+
+.container-3 {
+    display: flex;
+    margin: 10px 11%;
+}
+
+.column {
+    margin: 10px 8%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+    align-content: flex-start;
+}
+
+.column p {
+    font-size: 15px;
+    align-items: flex-start;
+    color: #afaeaedc;
+    display: inline-block;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.column-hover p {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.column-hover:hover p {
+    color: #8a8a8adc;
+}
+
+.column-2 {
+    align-items: flex-start;
+}
+
+.author-end {
+    margin: 30px 17%;
+}
+
+.author-end a {
+    text-decoration: none;
+}
+
+.author-end p {
+    font-size: 17px;
+    color: #afaeaedc;
+}
