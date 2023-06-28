@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'NotoSans-Medium';
+  src: url('../fonts/NotoSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('../fonts/Geologica_Cursive-Bold.ttf');
+}
+
+$mainColor: #ffc918dc;
+
+.home-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100vh;
+  background-color: #2c2c2cdc;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #363636dc;
+  height: 80px;
+  text-transform: uppercase;
+}
+
+.profile-section p {
+ font-family: 'Geologica';
+}
+
+.profile-section img {
+  width: 40px;
+  height: 40px; 
+  margin: 10px;
+}
+
+.profile-section span {
+  color: $mainColor;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid #333333;
+  font-size: 18px;
+  padding: 25px;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #79797880;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  color: $mainColor;
+  font-size: 25px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #333333;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffc918dc;
+  width: 0;
+  transition: width 0.3s ease;
+}

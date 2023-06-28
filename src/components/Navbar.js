@@ -11,14 +11,14 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      <ul className="navbar-nav">
-        <li className="nav-item">
+      <div className="navbar-nav">
+        <div className="nav-item">
           <Link to="/Login" className="nav-link">Login</Link>
-        </li>
+        </div>
         <button className="primary-btn">
           <Link to="/Signup" className="btn">Get Started</Link>
         </button>
-      </ul>
+      </div>
     </nav>
   );
 }

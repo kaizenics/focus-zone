@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BsFillPersonFill, BsFillKeyFill, BsFacebook, BsEnvelope } from 'react-icons/bs';
+import { BsFillPersonFill, BsFillKeyFill, BsFacebook, BsEnvelopeFill } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -13,7 +13,7 @@ export default function Login() {
             <section className="login-page">
                 <div className="box-container-2">
                     <div className="login-box">
-                        <h3>Signup</h3>
+                        <h3>Sign up</h3>
                         <div className="form-group">
                             <BsFillPersonFill className="input-icon" />
                             <input type="text" autocomplete="off" id="username" placeholder="Username" />
@@ -27,8 +27,8 @@ export default function Login() {
                             <input type="text" id="confirm-password" placeholder="Confirm Password" />
                         </div>
                         <div className="form-group">
-                            <BsEnvelope className="input-icon" />
-                            <input type="text" id="email" placeholder="Email" />
+                            <BsEnvelopeFill className="input-icon" />
+                            <input type="text" autocomplete="off" id="email" placeholder="Email" />
                         </div>
                         <button className="login-btn">Sign up</button>
                         <h5>Already have an account? <Link to="/Login" className="direct-auth">Log in</Link></h5>

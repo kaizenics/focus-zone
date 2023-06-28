@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import About from './pages/About';
+import Settings from './pages/Settings';
+import Profile from './pages/Profile';
 import './App.scss';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
      <Route path="/Signup" element={<Signup/>}/>
      <Route path="/Home" element={<Home/>}/>
      <Route path="/About" element={<About/>}/>
+     <Route path="/Settings" element={<Settings/>}/>
+     <Route path="/Profile" element={<Profile/>}/>
      </Routes>
     </>
   );
