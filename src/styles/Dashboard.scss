@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'NotoSans-Medium';
+  src: url('../fonts/NotoSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('../fonts/Geologica_Cursive-Bold.ttf');
+}
+
 .dashboard-container {
   display: flex;
 }
@@ -9,7 +19,7 @@
 
 .user-page {
   padding: 50px;
-  background: linear-gradient(349deg, rgba(44,171,167,1) 0%, rgba(63,18,102,1) 85%);
+  background: linear-gradient(349deg, rgba(96, 77, 49, 1) 0%, rgba(0, 0, 0, 1) 100%);
   display: flex;
 
   .u-icon {
@@ -42,45 +52,112 @@
 
     .progress-bar-1 {
       width: 300px;
-      height: 15px;
-
-      margin-top: 10px;
+      height: 12px;
+      margin-top: 12px;
 
       .progress-1 {
         height: 100%;
-        background-color: #e91010; 
+        background-color: #e91010;
       }
     }
 
     .progress-bar-2 {
       width: 300px;
-      height: 15px;
+      height: 12px;
       margin-top: 12px;
 
       .progress-2 {
         height: 100%;
-        background-color: #d4af37; 
+        background-color: #d4af37;
       }
     }
   }
 }
 
 .task-page {
-  justify-content: center;
-  align-items: center;
-  background-color: #242424;
-
-  .profile-icon {
-    font-size: 100px;
-  }
+  margin: 0;
+  padding: 0;
 
   .task-info {
     text-align: center;
+    
+    .task-controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 15px;
+      margin-right: 20px;
 
-    h3 {
-      margin-bottom: 10px;
+      .search-bar {
+        padding: 7px 10px;
+        margin-right: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        font-family: 'NotoSans-Medium';
+        font-size: 15px;
+        color: #000;
+      }
+
+      .search-btn {
+        margin-right: 7px;
+        padding: 7px 10px;
+        background-color: #d4af37;
+        font-size: 15px;
+        border: 2px solid #535353;
+        font-family: 'Geologica';
+        color: #ffffff;
+        vertical-align: middle;
+        transition: background-color 0.3s ease;
+      }
+
+      .search-btn:hover {
+        background-color: #b69734;
+      }
+
+      .add-task-btn {
+        padding: 7px 10px;
+        background-color: #444444;
+        font-size: 15px;
+        border: 2px solid #535353;
+        font-family: 'Geologica';
+        color: #ffffff;
+        vertical-align: middle;
+        transition: background-color 0.3s ease;
+      }
+
+    .add-task-btn:hover {
+      background-color: #535353;
     }
 
-    
+    .fa-icon {
+      vertical-align: middle;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+  }
+ }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .modal {
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 4px;
+
+
+    .close-modal-button {
+      margin-top: 10px;
+    }
   }
 }
