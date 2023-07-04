@@ -57,7 +57,7 @@ export default function Footer() {
             <footer className="column-2">
                 <div className="author-end">
                     <a href="https://facebook.com/kaisernics/" target="_blank" className="column-hover">
-                        <p>© 2023 Niko Soriano - Web Developer</p>
+                        <p>© 2023 Niko Soriano</p>
                     </a>
                 </div>
             </footer>
