@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase-config'
-import { Link } from 'react-router-dom';
-import { BsFillPersonFill, BsFillKeyFill, BsFacebook } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
+import { BsFillPersonFill, BsFillKeyFill, BsFacebook, BsFillEnvelopeFill } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -11,13 +11,28 @@ import '../styles/Auth.scss'
 export default function Login() {
     const [signUpEmail, setSignUpEmail] = useState();
     const [signUpPassword, setSignUpPassword] = useState();
+    const [confirmPassword, setConfirmPassword] = useState();
+    const [newDisplayName, setNewDisplayName] = useState();
+    const navigate = useNavigate();
 
-    async function signup() {
+    async function handleSignUp() {
+        if (signUpPassword !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
         try {
             const user = await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
             console.log(user);
+
+            await updateProfile(auth.currentUser, { displayName: newDisplayName });
+
+            const confirms = window.confirm("Sign-up Sucessful! Do you want to login directly?");
+            if (confirms) {
+            navigate('/Login');
+            }
         } catch(error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
@@ -32,27 +47,46 @@ export default function Login() {
                         <div className="form-group">
                             <BsFillPersonFill className="input-icon" />
                             <input 
-                            type="text" 
-                            autocomplete="off" 
-                            id="email" 
-                            placeholder="Email"
-                            onChange={(event) => {setSignUpEmail(event.target.value);}} />
+                                type="text" 
+                                autoComplete="off" 
+                                id="email" 
+                                placeholder="Display Name"
+                                value={newDisplayName}
+                                onChange={(event) => {setNewDisplayName(event.target.value);}}
+                            />
                         </div>
                         <div className="form-group">
-                            <BsFillKeyFill className="input-icon" />
+                            <BsFillEnvelopeFill className="input-icon" />
                             <input 
-                            type="text" 
-                            id="password" 
-                            placeholder="Password" 
-                            onChange={(event) => {setSignUpPassword(event.target.value);}}
+                                type="text" 
+                                autoComplete="off" 
+                                id="email" 
+                                placeholder="Email"
+                                value={signUpEmail}
+                                onChange={(event) => {setSignUpEmail(event.target.value);}} 
                             />
                         </div>
                         <div className="form-group">
                             <BsFillKeyFill className="input-icon" />
-                            <input type="text" id="confirm-password" placeholder="Confirm Password" />
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="Password" 
+                                value={signUpPassword}
+                                onChange={(event) => {setSignUpPassword(event.target.value);}}
+                            />
                         </div>
-                        <button className="login-btn"
-                        onClick={signup}>Sign up</button>
+                        <div className="form-group">
+                            <BsFillKeyFill className="input-icon" />
+                            <input 
+                                type="password" 
+                                id="confirm-password" 
+                                placeholder="Confirm Password"
+                                value={confirmPassword}
+                                onChange={(event) => {setConfirmPassword(event.target.value);}} 
+                            />
+                        </div>
+                        <button className="login-btn" onClick={handleSignUp}>Sign up</button>
                         <h5>Already have an account? <Link to="/Login" className="direct-auth">Log in</Link></h5>
                         <div className="end-2">
                             <div></div>

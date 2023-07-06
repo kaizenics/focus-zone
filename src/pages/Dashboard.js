@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { FaPlus, FaSearch, FaCalendarAlt } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { auth } from '../firebase-config'
+import { FaPlus, FaSearch} from 'react-icons/fa';
 import DatePicker from 'react-datepicker';
 import SideNavbar from '../components/SideNavbar';
 import '../styles/Dashboard.scss';
@@ -9,6 +10,15 @@ export default function Dashboard() {
   const [modalPop, setModalPop] = useState(false);
   const [selectedDate, setSelectedDate] = useState();
   const [taskType, setTaskType] = useState();
+  const [currentUserEmail, setCurrentUserEmail] = useState();
+  const [currentUserDisplayName, setCurrentUserDisplayName] = useState('');
+
+  useEffect(() => {
+    if (auth.currentUser) {
+      setCurrentUserEmail(auth.currentUser.email);
+      setCurrentUserDisplayName(auth.currentUser.displayName);
+    }
+  }, []);
 
   function openModal() {
     setModalPop(true);
@@ -28,7 +38,6 @@ export default function Dashboard() {
   function handleTaskTypeChange(event) {
     setTaskType(event.target.value);
   }
-
   return (
     <>
       <div className="dashboard-container">
@@ -41,8 +50,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="user-info">
-              <h3>Niko Soriano</h3>
-              <p>@kaizenics</p>
+              <h3>{currentUserDisplayName}</h3>
+              <p>{currentUserEmail}</p>
               <p>Level 100 • Prowess</p>
               <div className="progress-bar-1">
                 <div className="progress-1"></div>

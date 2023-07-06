@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase-config'
 import { Link, useNavigate } from 'react-router-dom';
-import { BsFillPersonFill, BsFillKeyFill, BsFacebook } from 'react-icons/bs';
+import { BsFillEnvelopeFill, BsFillKeyFill, BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -16,6 +16,7 @@ export default function Login() {
     useEffect(() => {
         const unsub = auth.onAuthStateChanged((user) => {
             if (user) {
+                alert("Logging in...");
                 navigate('/Dashboard');
             }
         });
@@ -30,7 +31,7 @@ export default function Login() {
         const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword );
         console.log(user)
         } catch(error) {
-            console.log(error.message);
+            alert("Wrong Credentials!");
         }
     }
    
@@ -43,7 +44,7 @@ export default function Login() {
                     <div className="login-box">
                         <h3>Login</h3>
                         <div className="form-group">
-                            <BsFillPersonFill className="input-icon" />
+                            <BsFillEnvelopeFill className="input-icon" />
                             <input 
                             type="text" 
                             autocomplete="off" 
@@ -54,7 +55,7 @@ export default function Login() {
                         <div className="form-group">
                             <BsFillKeyFill className="input-icon" />
                             <input 
-                            type="text" 
+                            type="password" 
                             id="password" 
                             placeholder="Password"
                             onChange={(event) => {setLoginPassword(event.target.value);}}  />
