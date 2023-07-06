@@ -1,0 +1,17 @@
+
+.settings-container {
+    display: flex;
+}
+
+.settings-page {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.logout-btn {
+    padding: 7px 10px;
+    background-color: #ff0000;
+    font-size: 15px;
+    border: 1px solid #292929;
+    color: #fff;
+}
