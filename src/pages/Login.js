@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase-config'
+import { useAuth } from '../components/AuthContext'
 import { Link, useNavigate } from 'react-router-dom';
 import { BsFillEnvelopeFill, BsFillKeyFill, BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
@@ -12,6 +13,7 @@ export default function Login() {
     const [loginEmail, setLoginEmail] = useState();
     const [loginPassword, setLoginPassword] = useState();
     const navigate = useNavigate();
+    const { googleSignIn } = useAuth();
 
     useEffect(() => {
         const unsub = auth.onAuthStateChanged((user) => {
@@ -35,6 +37,14 @@ export default function Login() {
         }
     }
    
+    async function handleGoogleSignIn() {
+        try {
+            googleSignIn();
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <>
             <Navbar />
@@ -69,7 +79,7 @@ export default function Login() {
                         <p>Or continue with</p>
                         
                         <button className="login-fb"><BsFacebook className="auth-icons"/>Login with Facebook</button>
-                        <button className="login-google"><FcGoogle className="auth-icons"/>Login with Google</button>
+                        <button className="login-google"><FcGoogle className="auth-icons" onClick={handleGoogleSignIn}/>Login with Google</button>
                     </div>
                 </div>
             </section>
