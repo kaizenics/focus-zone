@@ -133,6 +133,10 @@ $borderColor: #4e4e4e;
     transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
+.login-fb:hover {
+ background-color: #4c6496;
+}
+
 .login-google {
     background-color: #fff;
     font-size: 15px;
@@ -145,6 +149,10 @@ $borderColor: #4e4e4e;
     padding: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.login-google:hover {
+    background-color: #bebebe;
 }
 
 .auth-icons {
